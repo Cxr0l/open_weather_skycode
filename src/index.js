@@ -13,6 +13,19 @@ const coordLong = document.getElementById("longitude");
 const temp = document.getElementById("temp");
 const icon = document.getElementById("icon");
 
+const weatherBackgrounds = {
+    "clear sky": "url('../img/clear-sky.jpeg')",
+    "few clouds": "url('../img/few-clouds.jpg')",
+    "scattered clouds": "url('../img/scattered-clouds.jpg')",
+    "broken clouds": "url('../img/broken-clouds.jpeg')",
+    "overcast clouds": "url('../img/overcast-clouds.jpg')",
+    "shower rain": "url('../img/shower-rain.jpeg')",
+    "rain": "url('../img/rain.jpeg')",
+    "thunderstorm": "url('../img/thunderstorm.jpeg')",
+    "snow": "url('../img/snow.jpeg')",
+    "mist": "url('../img/mist.jpg')",
+};
+
 const currenWeather = async (latitude = london.lat, longitude = london.lon) => {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${keyWeather}`;
     const response = await fetch(url);
@@ -49,6 +62,12 @@ form.addEventListener('submit', (event) => {
 
         let iconWeather = response.weather[0].icon;
         icon.setAttribute("src", `https://openweathermap.org/img/wn/${iconWeather}@2x.png`);
+
+        const weatherDescription = response.weather[0].description;
+        const containerWeather = document.querySelector(".container-weather");
+        containerWeather.style.backgroundImage = weatherBackgrounds[weatherDescription];
+        const containerMain = document.querySelector(".container");
+        containerMain.style.backgroundImage = weatherBackgrounds[weatherDescription];
     })
     .catch(error => console.log(error));
 });
