@@ -1,0 +1,74 @@
+.weather-actual{
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 25px;
+    gap: 150px;
+}
+
+.data-actual{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+}
+
+.day {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px; /* ajusta el valor según sea necesario */
+}
+
+.description {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px; /* ajusta el valor según sea necesario */
+}
+
+
+/*CONTENEDOR DE GRADOS*/
+
+.grados-actual{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grados-primero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+
+    height: 70px;
+}
+
+.grados-primero h3 {
+    font-size: 50px;
+}
+
+.name-actual{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 1.2; /* ajusta el valor según sea necesario */
+}
+
+.nameCity {
+    margin-bottom: 5px; /* ajusta el valor según sea necesario */
+    margin-top: 5px;
+}
+
+.latitude {
+    margin-top: 5px; /* ajusta el valor según sea necesario */
+}
+
+.longitude{
+    margin-top: 0;
+}

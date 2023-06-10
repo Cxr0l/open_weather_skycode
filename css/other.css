@@ -1,0 +1,117 @@
+.weather-other {
+    color: var(--gray);
+    background-image: url(../img/r2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 40%;
+    max-width: 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 400%; /* actualiza el ancho del contenedor */
+    height: 100%;
+    margin-left: -100%;
+}
+
+.slider-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* actualiza el ancho del contenedor */
+    height: 100%;
+    justify-content: center;
+}
+
+.grados-other{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    justify-content: space-around;
+    border-bottom: 3px solid #00000042;
+    width: 50%;
+}
+
+.grados-other p{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.grados-other h3{
+    font-size: 35px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-other{
+    line-height: 1.2;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-other p{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.description1,
+.description2,
+.description3,
+.description4{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.close {
+    display: none;
+}
+
+
+/*SLIDER*/
+
+.slider-btn{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #ffffffc5;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-btn:hover{
+    background: #fff;
+}
+
+.slider-btnRight{
+    right: 10px;
+}
+
+.slider-btnLeft{
+    left: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+}

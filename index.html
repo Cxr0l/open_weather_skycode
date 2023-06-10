@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Weather SkyCode</title>
+</head>
+<body>
+    <main class="container">
+        <div class="container-section">
+
+            <section class="weather-title">
+                <h1>Weather SkyCode</h1>
+            </section>
+
+            <section class="container-weather">
+
+                <div class="weather-actual">
+
+                    <div class="data-actual">
+                            <p class="day" id="dayActual">Viernes</p>
+                            <p class="description" id="description"></p>    
+                    </div>
+    
+                    <div class="grados-actual">
+                         
+                        <div class="grados-primero">
+                            <h3 id="temp"></h3>
+                            <img alt="icon weather" id="icon" />
+                        </div>
+    
+                        <div class="name-actual">
+                            <h2 class="nameCity">
+                                <span id="nameCity"></span>
+                                <span id="nameCountry"></span>
+                            </h2>
+                            <p class="latitude" id="latitude"></p>
+                            <p class="longitude" id="longitude"></p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="weather-other">
+
+                    <div class="container-slider" id="slider">
+
+                        <div class="slider-section">
+                            <div class="grados-other">
+                                <p id="dayOther1">Tues</p>
+                                <h3 id="temp1">22 °C</h3>
+                            </div>
+        
+                            <div class="img-other">
+                                <p class="description1" id="description1">scattered clouds</p>
+                                <img src="./img/10d@2x.png" alt="icon-other1">
+                                <!-- <img alt="icon weather1" id="icon-other1" /> -->
+                            </div>
+                        </div>
+         
+                        <div class="slider-section">
+                            <div class="grados-other">
+                                <p id="dayOther2">Wed</p>
+                                <h3 id="temp2">25 °C</h3>
+                            </div>
+                            
+                            <div class="img-other">
+                                <p class="description2" id="description2">thunderstorm</p>
+                                <img src="./img/10d@2x.png" alt="icon-other2">
+                                <!-- <img alt="icon weather2" id="icon-other2" /> -->
+                            </div>
+                        </div>
+        
+                        <div class="slider-section">
+                            <div class="grados-other">
+                                <p id="dayOther3">Thurs</p>
+                                <h3 id="temp3">26 °C</h3>
+                            </div>
+                            
+                            <div class="img-other">
+                                <p class="description3" id="description3">rain</p>
+                                <img src="./img/10d@2x.png" alt="icon-other3">
+                                <!-- <img alt="icon weather3" id="icon-other3" /> -->
+                            </div>
+                        </div>
+        
+                        <div class="slider-section">
+                            <div class="grados-other">
+                                <p id="dayOther4">Fri</p>
+                                <h3 id="temp4">19 °C</h3>
+                            </div>
+                            
+                            <div class="img-other">
+                                <p class="description4" id="description4">clear sky</p>
+                                <img src="./img/10d@2x.png" alt="icon-other4">
+                                <!-- <img alt="icon weather4" id="icon-other4" /> -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="slider-btn slider-btnRight" id="buttonRight">&#62;</button>
+                    <button class="slider-btn slider-btnLeft" id="buttonLeft">&#60;</button>
+
+                </div>
+                
+            </section>
+
+            <section class="input">
+                <form class="input-form" id="form">
+
+                    <div class="input-data">
+                        <label class="label" for="city-input">Enter a City</label>
+                        <input class="input-city" type="text" maxlength="15" name="city-input" placeholder="ej. Caracas" id="city-input">
+                    </div>
+
+                    <div class="input-button" id="input-button">
+                        <button class="button" type="submit">Confirm</button>
+                    </div>
+                    
+                </form>
+            </section>
+
+        </div>
+    </main>
+    
+    <script src="./src/index.js"></script>
+    <script src="./src/slider.js"></script>
+</body>
+</html>
