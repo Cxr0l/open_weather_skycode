@@ -18,7 +18,7 @@ const weatherBackgrounds = {
     "few clouds": "url('../img/few-clouds.jpg')",
     "scattered clouds": "url('../img/scattered-clouds.jpg')",
     "broken clouds": "url('../img/broken-clouds.jpeg')",
-    "overcast clouds": "url('../img/overcast-clouds.jpg')",
+    "overcast clouds": "url('../img/overcast-clouds.webp')",
     "shower rain": "url('../img/shower-rain.jpeg')",
     "rain": "url('../img/rain.jpeg')",
     "thunderstorm": "url('../img/thunderstorm.jpeg')",
