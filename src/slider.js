@@ -50,10 +50,12 @@ const slider = document.getElementById("slider");
 const leftButton = document.getElementById("buttonLeft");
 const rightButton = document.getElementById("buttonRight");
 
-
+// Establecemos un contador para llevar la cuenta del contenedor actual
 let currentSlide = 0;
 
+// Función que se encarga de mostrar el contenedor actual
 function showSlide() {
+  // Obtenemos todos los contenedores del slider
   const slides = slider.getElementsByClassName("slider-section1");
 
   // Movemos los contenedores horizantalmente
@@ -62,19 +64,21 @@ function showSlide() {
   }
 }
 
+// Función que se ejecuta al hacer clic en el botón de la izquierda
 function slideLeft() {
+  // Restamos 1 al contador
   currentSlide--;
 
-
+  // Si llegamos al primer contenedor, volvemos al último
   if (currentSlide < 0) {
     currentSlide = slider.getElementsByClassName("slider-section1").length - 1;
   }
 
-  
+  // Mostramos el contenedor actual
   showSlide();
 }
 
-
+// Función que se ejecuta al hacer clic en el botón de la derecha
 function slideRight() {
   // Sumamos 1 al contador
   currentSlide++;
