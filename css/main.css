@@ -39,6 +39,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .container-weather{
     background-image: url("../img/main.jpg");
     background-repeat: no-repeat;
@@ -49,4 +50,64 @@
     box-shadow: 12px 12px 10px #0000008e;
     justify-content: space-between;
     flex-direction: row;
+}
+
+/*///////////////////////////////////MEDIA//////////////////////////*/
+
+@media screen and (max-width: 900px){
+    .container{
+        background-image: url("../img/main.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Agregar posición relativa */
+    }
+
+    .container::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.438);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0; /* Agregar z-index */
+    }
+
+    .container::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.438);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .container-section{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .container-weather{
+        background-image: url("../img/main.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        box-shadow: 12px 12px 10px #0000008e;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
 }
