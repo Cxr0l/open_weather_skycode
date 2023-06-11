@@ -21,6 +21,7 @@
 }
 
 .label{
+    font-size: 12px;
     margin-bottom: 5px;
     text-transform: uppercase;
     font-weight: bold;
@@ -49,7 +50,6 @@
     background-color: var(--gray);
     color: var(--white);
     font-size: 1rem;
-    padding: 5px;
     width: 50%;
     border-radius: .3rem;
     cursor: pointer;

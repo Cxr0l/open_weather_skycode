@@ -22,6 +22,7 @@
 
 .container-section{
     width: 60%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,6 +39,7 @@
     text-shadow: 2px 2px 2px #000;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 22px;
 }
 
 .container-weather{
@@ -45,7 +47,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 465px;
+    height: 450px;
     display: flex;
     box-shadow: 12px 12px 10px #0000008e;
     justify-content: space-between;
