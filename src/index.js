@@ -15,7 +15,7 @@ const icon = document.getElementById("icon");
 
 const weatherBackgrounds = {
     "clear sky": "url('../img/clear-sky.jpeg')",
-    "few clouds": "url('../img/few-clouds.jpeg')",
+    "few clouds": "url('../img/few-clouds.webp')",
     "scattered clouds": "url('../img/scattered-clouds.jpg')",
     "broken clouds": "url('../img/broken-clouds.jpeg')",
     "overcast clouds": "url('../img/overcast-clouds.webp')",
