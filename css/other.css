@@ -116,3 +116,28 @@ button {
     border: none;
     outline: none;
 }
+
+@media screen and (max-width: 900px){
+    .weather-other {
+        color: var(--gray);
+        background-image: url(../img/r2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+    
+    .container-slider {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        width: 400%; /* actualiza el ancho del contenedor */
+        height: 100%;
+        margin-left: -100%;
+    }
+}
