@@ -141,3 +141,12 @@ button {
         margin-left: -100%;
     }
 }
+
+@media screen and (max-width: 480px){
+    .description1,
+    .description2,
+    .description3,
+    .description4{
+    font-size: 15px;
+    }
+}
