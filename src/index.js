@@ -103,12 +103,46 @@ const convertKelvinToCelsius = (tempKelvin) => {
 };
 
 const form = document.getElementById("form");
+const cityInput = document.getElementById("city-input");
+
+// Función para validar el input.
+function validateInput(input) {
+  const regex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
+  return regex.test(input);
+}
+
+// Función para limpiar el input de caracteres no permitidos.
+function cleanInput() {
+  const allowedCharacters = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*$/;
+  if (!allowedCharacters.test(cityInput.value)) {
+    cityInput.value = cityInput.value.replace(/[^a-zA-ZñÑáéíóúÁÉÍÓÚ\s]/g, '');
+  }
+}
+
+// Agregar evento keydown para evitar que se marque el input.
+cityInput.addEventListener('keydown', () => {
+});
+
+// Agregar evento input para limpiar el input de caracteres no permitidos.
+cityInput.addEventListener('input', () => {
+  cleanInput();
+});
+
+
+
+
+// Agregar evento submit al formulario.
 form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const cityInput = document.getElementById("city-input").value;
-    getCoordinateCity(cityInput)
-    .then(response => {
-        currenWeather(response.coord.lat, response.coord.lon);
+  event.preventDefault();
+  const city = cityInput.value.trim();
+  if (!validateInput(city)) {
+    cityInput.value = "";
+    return;
+}
+
+getCoordinateCity(city)
+  .then(response => {
+    currenWeather(response.coord.lat, response.coord.lon);
         nameCity.innerText = response.name;
         nameCountry.innerText = response.sys.country;
         description.innerText = response.weather[0].description;
@@ -131,6 +165,44 @@ form.addEventListener('submit', (event) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// const form = document.getElementById("form");
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     const cityInput = document.getElementById("city-input").value;
+//     getCoordinateCity(cityInput)
+//     .then(response => {
+//         currenWeather(response.coord.lat, response.coord.lon);
+//         nameCity.innerText = response.name;
+//         nameCountry.innerText = response.sys.country;
+//         description.innerText = response.weather[0].description;
+//         coordLat.innerText = response.coord.lat;
+//         coordLong.innerText = response.coord.lon;
+
+//         temp.innerText = convertKelvinToCelsius(response.main.temp);
+
+//         let iconWeather = response.weather[0].icon;
+//         icon.setAttribute("src", `https://openweathermap.org/img/wn/${iconWeather}@2x.png`);
+
+//         const weatherDescription = response.weather[0].description;
+//         const containerWeather = document.querySelector(".container-weather");
+//         containerWeather.style.backgroundImage = weatherBackgrounds[weatherDescription];
+//         const containerMain = document.querySelector(".container");
+//         containerMain.style.backgroundImage = weatherBackgrounds[weatherDescription];
+//     })
+//     .catch(error => console.log(error));
+// });
 
 
 
