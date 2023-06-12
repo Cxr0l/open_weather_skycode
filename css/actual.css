@@ -67,6 +67,7 @@
 
 .latitude {
     margin-top: 5px; /* ajusta el valor según sea necesario */
+    margin-bottom: 10px;
 }
 
 .longitude{
