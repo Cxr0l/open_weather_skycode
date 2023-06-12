@@ -59,3 +59,15 @@
 .button:hover{
     background: #000000;
 }
+
+@media screen and (max-width: 480px){
+    .input-city {
+        padding: 1px;
+        width: 100%;
+        border: 1px solid var(--dark);
+        border-radius: .3rem;
+        font-family: 'Poppins';
+        text-align: center;
+        box-shadow: 2px 2px 5px #000;
+    }
+}

@@ -128,7 +128,7 @@ button {
         max-width: 100%;
         position: relative;
         overflow: hidden;
-        margin-top: 20px;
+        margin-top: 0;
     }
     
     .container-slider {
