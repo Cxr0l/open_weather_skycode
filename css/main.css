@@ -22,7 +22,7 @@
 
 .container-section{
     width: 60%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +62,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -106,7 +106,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: 100%;
+        height: 564px;
         display: flex;
         box-shadow: 12px 12px 10px #0000008e;
         justify-content: center;
