@@ -1,67 +1,25 @@
-// const slider = document.querySelector("#slider");
-
-// let sliderSection = document.querySelectorAll(".slider-section1");
-// if (sliderSection.length > 0) {
-//   let sliderSectionLast = sliderSection[sliderSection.length -1];
-//   slider.insertAdjacentElement("afterbegin", sliderSectionLast);
-// }
-
-// const btnLeft = document.querySelector("#buttonLeft");
-// const btnRight = document.querySelector("#buttonRight");
-
-// function next() {
-//   let sliderSectionFirst = document.querySelectorAll(".slider-section")[0];
-//   if (sliderSectionFirst) {
-//     slider.style.marginLeft = "-200%";
-//     slider.style.transition = "all 0.5s";
-//     setTimeout(function() {
-//       slider.style.transition = "none";
-//       slider.insertAdjacentElement("beforeend", sliderSectionFirst);
-//       slider.style.marginLeft = "-100%";
-//     }, 500);
-//   }
-// }
-
-// function prev() {
-//   let sliderSection = document.querySelectorAll(".slider-section");
-//   let sliderSectionLast = sliderSection[sliderSection.length -1];
-//   if (sliderSectionLast) {
-//     slider.style.marginLeft = "0";
-//     slider.style.transition = "all 0.5s";
-//     setTimeout(function() {
-//       slider.style.transition = "none";
-//       slider.insertAdjacentElement("afterbegin", sliderSectionLast);
-//       slider.style.marginLeft = "-100%";
-//     }, 500);
-//   }
-// }
-
-// btnRight.addEventListener("click", function() {
-//   next();
-// })
-
-// btnLeft.addEventListener("click", function() {
-//   prev();
-// })
-
-
 // Primero, obtenemos los elementos que necesitamos
 const slider = document.getElementById("slider");
 const leftButton = document.getElementById("buttonLeft");
 const rightButton = document.getElementById("buttonRight");
 
+console.log()
+
 // Establecemos un contador para llevar la cuenta del contenedor actual
 let currentSlide = 0;
-
+//Declaramos el dia actual en 1
+let cd = 1
 // Función que se encarga de mostrar el contenedor actual
 function showSlide() {
   // Obtenemos todos los contenedores del slider
   const slides = slider.getElementsByClassName("slider-section1");
 
+ 
+
   // Movemos los contenedores horizantalmente
-  for (let i = 0; i < slides.length; i++) {
+  /*for (let i = 0; i < slides.length; i++) {
     slides[i].style.transform = `translateX(-${currentSlide * 100}%)`;
-  }
+  }*/
 }
 
 // Función que se ejecuta al hacer clic en el botón de la izquierda
@@ -70,9 +28,27 @@ function slideLeft() {
   currentSlide--;
 
   // Si llegamos al primer contenedor, volvemos al último
-  if (currentSlide < 0) {
+   if (currentSlide < 0) {
     currentSlide = slider.getElementsByClassName("slider-section1").length - 1;
-  }
+  } 
+
+
+  
+  /**
+   * Buscamos el slider que tenga la clase active y sacamos el valor de dia (data-day).
+   * Luego pasamos a enter y le sumamos uno, en caso de ser 0, colocamos cd en 7.
+   * Luego buscamos el slider donde el data-day correponda con la resta anterior y le
+   * agregamos la clase active, para que se muestre, y al elemento actual se la quitamos
+   */
+      let currect_slider = document.querySelector('.slider-section1.active').getAttribute('data-day');
+          document.querySelector('.slider-section1.active').classList.remove('active');
+      let cd = (parseInt(currect_slider)-1);
+          if(cd == "0"){
+            cd = 7;
+          }
+      let act_nest_slider = document.querySelector('div[data-day="'+cd+'"]').classList.add('active');
+      
+
 
   // Mostramos el contenedor actual
   showSlide();
@@ -82,6 +58,22 @@ function slideLeft() {
 function slideRight() {
   // Sumamos 1 al contador
   currentSlide++;
+  
+  /**
+   * Buscamos el slider que tenga la clase active y sacamos el valor de dia (data-day).
+   * Luego pasamos a enter y le sumamos uno, en caso de ser 8, colocamos cd en 1.
+   * Luego buscamos el slider donde el data-day correponda con la suma anterior y le
+   * agregamos la clase active, para que se muestre, y al elemento actual se la quitamos
+   */
+      let currect_slider = document.querySelector('.slider-section1.active').getAttribute('data-day');
+          document.querySelector('.slider-section1.active').classList.remove('active');
+      let cd = (parseInt(currect_slider)+1);
+      if(cd == "8"){
+        cd = 1;
+      }
+      let act_nest_slider = document.querySelector('div[data-day="'+cd+'"]').classList.add('active');
+      
+
 
   // Si llegamos al último contenedor, volvemos al primero
   if (currentSlide >= slider.getElementsByClassName("slider-section1").length) {
