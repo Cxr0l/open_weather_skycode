@@ -1,5 +1,5 @@
 .container{
-    background-image: url("../img/main.jpg");
+    background-image: url("./img/main.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -43,7 +43,7 @@
 }
 
 .container-weather{
-    background-image: url("../img/main.jpg");
+    background-image: url("./img/main.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
